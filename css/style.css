@@ -67,11 +67,12 @@ p {
     margin-top: 0;
 }
 /* stilling for all */
-.nav{
+/* padding */
+.nav, .freedom{
         padding: 0  60px;
 }
 /* display flex/jcc/aic*/
-.nav, .nav-links-container, .nav-links, .btn{
+.nav, .nav-links-container, .nav-links, .btn, .freedom, .freedom-description, .freedom-imgs, .freedom-btns{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +83,7 @@ p {
     background-color: var(--font-color-link);
     border-radius: 30px;
     text-align: center;
+    color: #fff;
 }
 .nav {
     z-index: 999;
@@ -93,7 +95,7 @@ p {
     width: 150px;
 }
 .nav-links-container{
-    font-size: var(--size-16);
+    font-size: var(--size-14);
 }
 .nav-links{
     gap: 20px;
@@ -101,10 +103,49 @@ p {
 .nav-link a{
     color: var(--font-color-base);
 }
-.nav-link:nth-child(2) a {
+.nav-link:nth-child(2) a, .freedom-btns .learn-more-btn {
     color: var(--font-color-link);
 }
 .nav-link-btn{
     margin-left: 20px;
-    color: #fff;
+}
+
+.freedom{
+    justify-content: space-between;
+    height: 500px;
+    border: 2px solid red;
+    background-image: url(../assets/bg/background-top.svg);
+}
+.freedom-description{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    gap: 10px;
+}
+.freedom-description h2{
+    font-size: var(--size-40);
+    width: 300px;
+    color: var(--font-color-dark);
+    line-height: 1.3;
+}
+.freedom-description p{
+    font-size: var(--size-14);
+    margin-bottom: 20px;
+}
+.freedom-imgs{
+    width: 50%;
+}
+.freedom-img img{
+    height: var(--size-40);
+    width: var(--size-40);
+}
+.freedom-btns{
+    gap: 20px;
+    font-size: var(--size-14);
+}
+.freedom-btns .btn{
+    width: 140px;
+}
+.freedom-btns .learn-more-btn{
+    font-weight: bold;
 }
