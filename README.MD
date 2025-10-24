@@ -26,13 +26,13 @@ Please visit the [project mockups page](https://www.figma.com/design/Ou3rfktmwkX
 `General`
 
 -   [ ] The layout of the submitted project must match the Figma mockups as closely as possible (100% match) for all three screen sizes: desktop, tablet, and mobile.
--   [ ] The project initially includes a single CSS file, but you can use multiple files if needed. Ensure that styles are not duplicated across these files.
--   [ ] You can use any fonts you prefer, such as standard library sans-serif fonts or sans-serif web fonts.
+-   [x] The project initially includes a single CSS file, but you can use multiple files if needed. Ensure that styles are not duplicated across these files.
+-   [x] You can use any fonts you prefer, such as standard library sans-serif fonts or sans-serif web fonts.
 -   [ ] The screenshots of the solved version of that project are located in `/assets/screenshots/`.
--   [ ] The background image for the top section is located in `/assets/bg/`.
--   [ ] The logos of brands used in the project are located in `/assets/logos/`.
--   [ ] Other images to be used are located in `/assets/images/`.
--   [ ] Icons for buttons, top navigation, and bottom navigation should be implemented using an icon font of your choice (icons should not be images).
+-   [x] The background image for the top section is located in `/assets/bg/`.
+-   [x] The logos of brands used in the project are located in `/assets/logos/`.
+-   [x] Other images to be used are located in `/assets/images/`.
+-   [x] Icons for buttons, top navigation, and bottom navigation should be implemented using an icon font of your choice (icons should not be images).
 
 `Desktop specific`
 
