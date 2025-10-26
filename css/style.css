@@ -110,8 +110,10 @@ hr {
     color: #fff;
     cursor: pointer;
 }
-.btn:hover {
+.btn:hover,
+.privacy-btns .view-privacy-btn:hover {
     color: var(--font-color-dark);
+    cursor: pointer;
 }
 
 .nav {
@@ -132,7 +134,8 @@ hr {
 .nav-link a {
     color: var(--font-color-base);
 }
-.nav-link a:hover {
+.nav-link a:hover,
+.footer-links ul li:hover {
     color: var(--font-color-link);
 }
 .nav-link:nth-child(2) a,
@@ -306,6 +309,7 @@ hr {
 .price-container {
     flex-direction: column;
     text-align: center;
+    margin: 40px 0;
 }
 .pricing-description {
     margin: 0 0 40px;
@@ -345,13 +349,29 @@ hr {
     margin-top: 32px;
     width: 140px;
 }
+.btn-primary:hover {
+    box-shadow: 0px 3px 9px rgb(0 0 0 / 30%);
+    transition: ease 0.3s;
+}
 .no-cc {
     margin-top: 8px;
 }
+.card-container {
+    width: 80%;
+}
+.key-benefit-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 .key-benefit-card {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 40px;
+    padding: 20px;
+}
+.key-benefit-cards .key-benefit-card {
+    width: 250px;
 }
 .key-benefit-card img {
     width: 50px;
@@ -483,6 +503,14 @@ hr {
     width: 100%;
     height: 300px;
 }
+.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+    height: 300px;
+}
 .column {
     width: 600px;
     display: flex;
@@ -511,5 +539,327 @@ hr {
     .price-grid,
     .footer-columns {
         padding: 0 40px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .nav {
+        width: 100%;
+    }
+    .freedom {
+        flex-direction: column;
+        text-align: center;
+        height: 700px;
+        padding-top: 40px;
+    }
+    .freedom-description {
+        width: 100%;
+        align-items: center;
+    }
+    .freedom-description h2 {
+        width: 100%;
+    }
+    .why-front-options {
+        gap: 0;
+    }
+    hr {
+        width: 5rem;
+    }
+    .why-front-hr {
+        top: 1.5rem;
+    }
+    .freedom-imgs div:nth-child(1) {
+        bottom: 300px;
+        right: 370px;
+    }
+    .freedom-imgs div:nth-child(2) {
+        bottom: 260px;
+        right: 180px;
+        padding-bottom: 8px;
+    }
+    .freedom-imgs div:nth-child(3) {
+        bottom: 270px;
+        right: -40px;
+    }
+    .freedom-imgs div:nth-child(4) {
+        top: -220px;
+        right: 370px;
+    }
+    .freedom-imgs div:nth-child(5) {
+        top: -200px;
+        right: 60px;
+    }
+    .freedom-imgs div:nth-child(6) {
+        top: -100px;
+        right: -60px;
+    }
+    .freedom-imgs div:nth-child(7) {
+        top: -100px;
+        right: 240px;
+    }
+    .price-container {
+        margin: 40px 0;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-container {
+        width: 600px;
+    }
+    .key-benefit-card.primary {
+        width: 85%;
+        height: 350px;
+    }
+
+    .key-benefit-card {
+        width: 45%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        gap: 16px;
+    }
+    .hire-us-container {
+        flex-direction: column;
+        height: 1000px;
+    }
+    .hire-us-description {
+        flex-direction: row;
+        width: 600px;
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+    .description-header {
+        width: 400px;
+    }
+    .description-testimonial {
+        width: 240px;
+    }
+    .hire-us-contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 600px;
+    }
+    .form-input {
+        height: 50px;
+    }
+    .footer-columns {
+        height: 400px;
+        margin: 40px 0;
+        align-items: flex-start;
+    }
+    .front-contact-details.column {
+        width: 60%;
+    }
+
+    .footer-links {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .footer-links .column {
+        width: 200px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .nav {
+        width: 100%;
+        position: relative;
+    }
+
+    .nav-hamburber-btn {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .nav-links-container {
+        position: fixed;
+        flex-direction: column;
+        background-color: rgba(108, 123, 140, 0.9);
+        width: 40%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+
+        /* Initial collapsed state */
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        /* Smooth transition */
+        transition: max-height 0.5s ease, opacity 0.4s ease,
+            visibility 0s linear 0.5s; /* Delay visibility until animation ends */
+    }
+
+    .nav-links-container.open {
+        max-height: 100vh; /* Enough to show all */
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.5s ease, opacity 0.4s ease,
+            visibility 0s linear 0s;
+    }
+    .hidden {
+        display: none;
+    }
+
+    .nav-close {
+        display: block;
+        position: fixed;
+        top: 27px;
+        right: 50px;
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--font-color-dark);
+    }
+    .nav-links {
+        flex-direction: column;
+        font-size: 32px;
+        width: 100%;
+    }
+    .nav-link a {
+        color: var(--font-color-dark);
+    }
+    .nav-link-btn {
+        margin-top: 20px;
+    }
+    .freedom {
+        margin-bottom: 40px;
+    }
+    .freedom-description {
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .freedom-description h2 {
+        font-size: var(--size-24);
+    }
+    .freedom-imgs div:nth-child(1) {
+        bottom: 200px;
+        right: 170px;
+    }
+    .freedom-imgs div:nth-child(2) {
+        bottom: 160px;
+        right: 40px;
+        padding-bottom: 8px;
+    }
+    .freedom-imgs div:nth-child(3) {
+        bottom: 160px;
+        right: -80px;
+    }
+    .freedom-imgs div:nth-child(4) {
+        top: -170px;
+        right: 150px;
+    }
+    .freedom-imgs div:nth-child(5) {
+        top: -150px;
+        right: -20px;
+    }
+    .freedom-imgs div:nth-child(6) {
+        top: -80px;
+        right: -80px;
+    }
+    .freedom-imgs div:nth-child(7) {
+        top: -80px;
+        right: 80px;
+    }
+    .why-front-container {
+        height: 100%;
+        gap: 20px;
+    }
+    .why-front-options {
+        gap: 20px;
+        width: 100%;
+        padding: 0 40px;
+    }
+    .options {
+        flex-direction: row;
+        width: 100%;
+        font-size: var(--size-16);
+    }
+    .why-front-hr {
+        display: none;
+    }
+    .key-benefit-card.primary {
+        width: 90%;
+        height: 360px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .key-benefit-cards {
+        text-align: left;
+    }
+    .key-benefit-card {
+        align-items: flex-start;
+    }
+    .hire-us-container {
+        height: 100%;
+    }
+    .hire-us-description {
+        align-items: center;
+        height: 100%;
+    }
+    .description-header,
+    .description-testimonial {
+        text-align: center;
+    }
+    .hire-us-contact-form {
+        margin: 20px;
+        width: 90%;
+    }
+    .hire-us-contact-form form {
+        padding-top: 20px;
+    }
+    .hire-us-contact-form .form-input input,
+    .hire-us-contact-form .form-input select {
+        width: 100%;
+        height: 100%;
+    }
+    .form-input {
+        flex-direction: column;
+        margin: 0;
+        gap: 10px;
+        height: 80px;
+    }
+    .contact-email.form-input {
+        height: 40px;
+        margin: 10px 0;
+    }
+    .freedom-description,
+    .why-front-description p {
+        width: 100%;
+    }
+    .freedom,
+    .why-front-options,
+    .footer-columns,
+    .footer-link,
+    .card-container,
+    .hire-us-container,
+    .footer-links {
+        flex-direction: column;
+    }
+    .front-contact-details.column,
+    .footer-links .column {
+        width: 100%;
+    }
+    .footer-columns {
+        justify-content: center;
+        gap: 0;
+        height: 100%;
+        margin: 40px 0;
+    }
+    .footer-links {
+        height: 100%;
+    }
+    .column {
+        align-items: center;
+        height: 100%;
+        text-align: center;
     }
 }
