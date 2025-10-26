@@ -25,10 +25,10 @@ Please visit the [project mockups page](https://www.figma.com/design/Ou3rfktmwkX
 
 `General`
 
--   [ ] The layout of the submitted project must match the Figma mockups as closely as possible (100% match) for all three screen sizes: desktop, tablet, and mobile.
+-   [x] The layout of the submitted project must match the Figma mockups as closely as possible (100% match) for all three screen sizes: desktop, tablet, and mobile.
 -   [x] The project initially includes a single CSS file, but you can use multiple files if needed. Ensure that styles are not duplicated across these files.
 -   [x] You can use any fonts you prefer, such as standard library sans-serif fonts or sans-serif web fonts.
--   [ ] The screenshots of the solved version of that project are located in `/assets/screenshots/`.
+-   [x] The screenshots of the solved version of that project are located in `/assets/screenshots/`.
 -   [x] The background image for the top section is located in `/assets/bg/`.
 -   [x] The logos of brands used in the project are located in `/assets/logos/`.
 -   [x] Other images to be used are located in `/assets/images/`.
@@ -36,16 +36,16 @@ Please visit the [project mockups page](https://www.figma.com/design/Ou3rfktmwkX
 
 `Desktop specific`
 
--   [ ] Transitions and keyframe animations should be functional for desktop devices only.
--   [ ] The icons in the top section must appear with animations. Use at least two different animations or animation directions.
+-   [x] Transitions and keyframe animations should be functional for desktop devices only.
+-   [x] The icons in the top section must appear with animations. Use at least two different animations or animation directions.
 -   [ ] The following items must include hover animations:
 
-    -   [ ] Top navigation items
-    -   [ ] All buttons (e.g., buy, play, form submit) (use the inverse colors for the border, background, text color and the icon color for the hovered state)
-    -   [ ] The main price box in the "Pricing" section (add the shadow around the box for the hovered state)
-    -   [ ] Bottom navigation items
-    -   [ ] "View privacy policy" link in the form
+    -   [x] Top navigation items
+    -   [x] All buttons (e.g., buy, play, form submit) (use the inverse colors for the border, background, text color and the icon color for the hovered state)
+    -   [x] The main price box in the "Pricing" section (add the shadow around the box for the hovered state)
+    -   [x] Bottom navigation items
+    -   [x] "View privacy policy" link in the form
 
 `Tablet and mobile specific`
 
--   [ ] Should not have transition and keyframe animations working.
+-   [x] Should not have transition and keyframe animations working.
