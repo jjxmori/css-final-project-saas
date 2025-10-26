@@ -6,6 +6,11 @@
         <title>Front</title>
         <link rel="stylesheet" href="./css/default.css" />
         <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            media="(min-width: 1024px)"
+        />
         <script
             src="https://kit.fontawesome.com/8aed821357.js"
             crossorigin="anonymous"
@@ -17,7 +22,10 @@
             <a class="nav-logo" href="index.html">
                 <img src="./assets/logos/logo-front.svg" alt="Front logo"
             /></a>
-            <div class="nav-links-container">
+            <div id="navMenu" class="nav-links-container">
+                <div class="nav-close" onclick="toggleMenu()" hidden>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <ul class="nav-links">
                     <li class="nav-link"><a href="#">Home</a></li>
                     <li class="nav-link"><a href="#">Features</a></li>
@@ -26,6 +34,9 @@
                     <li class="nav-link"><a href="#">Hire Us</a></li>
                 </ul>
                 <div class="nav-link-btn btn">Buy Now</div>
+            </div>
+            <div class="nav-hamburber-btn" onclick="toggleMenu()" hidden>
+                <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
         <main>
@@ -42,28 +53,42 @@
                     </div>
                 </div>
                 <div class="freedom-imgs">
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInDown"
+                    >
                         <img src="./assets/logos/google.png" alt="google" />
                     </div>
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInDown"
+                    >
                         <img
                             src="./assets/logos/atlassian.png"
                             alt="atlassian"
                         />
                     </div>
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInDown"
+                    >
                         <img src="./assets/logos/asana.png" alt="asana" />
                     </div>
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInRight"
+                    >
                         <img src="./assets/logos/paypal.jpg" alt="paypal" />
                     </div>
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInRight"
+                    >
                         <img src="./assets/logos/weave.png" alt="weave" />
                     </div>
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInLeft"
+                    >
                         <img src="./assets/logos/calendar.png" alt="calendar" />
                     </div>
-                    <div class="freedom-img">
+                    <div
+                        class="freedom-img animate__animated animate__backInLeft"
+                    >
                         <img
                             src="./assets/logos/google-ads.png"
                             alt="google ads"
@@ -123,12 +148,6 @@
                         <hr />
                     </div>
                 </div>
-                <div class="why-front-video">
-                    <img src="./assets/banners/banner_two.jpg" alt="" />
-                    <div class="play-btn">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
             </section>
             <!-- pricing -->
             <section class="price-container">
@@ -136,7 +155,7 @@
                     <h2>Pricing</h2>
                     <p>No additional costs. Pay for what you use.</p>
                 </div>
-                <div class="price-grid">
+                <div class="card-container">
                     <div class="key-benefit-card primary">
                         <h2>$59<span> /mo</span></h2>
                         <hr />
@@ -149,37 +168,39 @@
                         </div>
                         <p class="no-cc">No credit card required</p>
                     </div>
-                    <div class="key-benefit-card">
-                        <img src="./assets/images/components.svg" alt="" />
-                        <h4>Hundreds of components</h4>
-                        <p>
-                            start your Front business now. 100% guaranteed money
-                            back. No questions asked.
-                        </p>
-                    </div>
-                    <div class="key-benefit-card">
-                        <img src="./assets/images/images.svg" alt="" />
-                        <h4>Images included</h4>
-                        <p>
-                            start your Front business now. 100% guaranteed money
-                            back. No questions asked.
-                        </p>
-                    </div>
-                    <div class="key-benefit-card">
-                        <img src="./assets/images/cancel.svg" alt="" />
-                        <h4>Cancel anytime</h4>
-                        <p>
-                            start your Front business now. 100% guaranteed money
-                            back. No questions asked.
-                        </p>
-                    </div>
-                    <div class="key-benefit-card">
-                        <img src="./assets/images/moneyback.svg" alt="" />
-                        <h4>Money back</h4>
-                        <p>
-                            start your Front business now. 100% guaranteed money
-                            back. No questions asked.
-                        </p>
+                    <div class="key-benefit-cards">
+                        <div class="key-benefit-card">
+                            <img src="./assets/images/components.svg" alt="" />
+                            <h4>Hundreds of components</h4>
+                            <p>
+                                start your Front business now. 100% guaranteed
+                                money back. No questions asked.
+                            </p>
+                        </div>
+                        <div class="key-benefit-card">
+                            <img src="./assets/images/images.svg" alt="" />
+                            <h4>Images included</h4>
+                            <p>
+                                start your Front business now. 100% guaranteed
+                                money back. No questions asked.
+                            </p>
+                        </div>
+                        <div class="key-benefit-card">
+                            <img src="./assets/images/cancel.svg" alt="" />
+                            <h4>Cancel anytime</h4>
+                            <p>
+                                start your Front business now. 100% guaranteed
+                                money back. No questions asked.
+                            </p>
+                        </div>
+                        <div class="key-benefit-card">
+                            <img src="./assets/images/moneyback.svg" alt="" />
+                            <h4>Money back</h4>
+                            <p>
+                                start your Front business now. 100% guaranteed
+                                money back. No questions asked.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -189,13 +210,13 @@
                     <div class="description-header">
                         <h2>Hire us</h2>
                         <p>Whatever your goal - we will get you there</p>
-                    </div>
-                    <hr />
-                    <div class="description-testimonial">
+                        <hr />
                         <p class="quote">
                             "I love front! I love the ease of use, I love the
                             fact that I have total creative freedom..."
                         </p>
+                    </div>
+                    <div class="description-testimonial">
                         <div class="testimonial-user">
                             <h3>Charlotte Moore</h3>
                             <p>Head of commercials, Slack</p>
@@ -209,11 +230,11 @@
                         possible
                     </h3>
                     <form action="">
-                        <div class="contac-name">
+                        <div class="contac-name form-input">
                             <input type="text" placeholder="First name" />
                             <input type="text" placeholder="Last name" />
                         </div>
-                        <div class="contact-email">
+                        <div class="contact-email form-input">
                             <input
                                 type="email"
                                 name=""
@@ -221,7 +242,7 @@
                                 placeholder="Email"
                             />
                         </div>
-                        <div class="contact-money-country">
+                        <div class="contact-money-country form-input">
                             <select name="" id="">
                                 <option value="budget">Budget</option>
                             </select>
@@ -231,7 +252,7 @@
                         </div>
                         <div class="contact-textarea">
                             <textarea name="" id="">
-Tell us more about yourr project, needs, and timeline, please....</textarea
+Tell us more about your project, needs, and timeline, please....</textarea
                             >
                         </div>
                         <div class="form-cta">
@@ -269,48 +290,66 @@ Tell us more about yourr project, needs, and timeline, please....</textarea
                     <span>+1 (062) 109-9222</span>
                 </div>
             </div>
-            <div class="company-links column">
-                <h3>Company</h3>
-                <ul>
-                    <li class="company-link">About</li>
-                    <li class="company-link">
-                        Career <span>We're hiring</span>
-                    </li>
-                    <li class="company-link">Blog</li>
-                    <li class="company-link">Customers</li>
-                    <li class="company-link">Hireus</li>
-                </ul>
-            </div>
-            <div class="freatures-links column">
-                <h3>Features</h3>
-                <ul>
-                    <li class="features-link">Press</li>
-                    <li class="features-link">Release Notes</li>
-                    <li class="features-link">Integrations</li>
-                    <li class="features-link">pricing</li>
-                </ul>
-            </div>
-            <div class="doc-links column">
-                <h3>Documentation</h3>
-                <ul>
-                    <li class="doc-link">Support</li>
-                    <li class="doc-link">Docs</li>
-                    <li class="doc-link">Status</li>
-                    <li class="doc-link">API Reference</li>
-                    <li class="doc-link">Tech Requirements</li>
-                </ul>
-            </div>
-            <div class="resources-links column">
-                <h3>Resources</h3>
-                <ul>
-                    <li class="resource-link">
-                        <i class="fa-solid fa-circle-info"></i> Help
-                    </li>
-                    <li class="resource-link">
-                        <i class="fa-solid fa-user"></i> Your Account
-                    </li>
-                </ul>
+            <div class="footer-links">
+                <div class="company-links column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li class="company-link">About</li>
+                        <li class="company-link">
+                            Career <span>We're hiring</span>
+                        </li>
+                        <li class="company-link">Blog</li>
+                        <li class="company-link">Customers</li>
+                        <li class="company-link">Hireus</li>
+                    </ul>
+                </div>
+                <div class="freatures-links column">
+                    <h3>Features</h3>
+                    <ul>
+                        <li class="features-link">Press</li>
+                        <li class="features-link">Release Notes</li>
+                        <li class="features-link">Integrations</li>
+                        <li class="features-link">pricing</li>
+                    </ul>
+                </div>
+                <div class="doc-links column">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li class="doc-link">Support</li>
+                        <li class="doc-link">Docs</li>
+                        <li class="doc-link">Status</li>
+                        <li class="doc-link">API Reference</li>
+                        <li class="doc-link">Tech Requirements</li>
+                    </ul>
+                </div>
+                <div class="resources-links column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li class="resource-link">
+                            <i class="fa-solid fa-circle-info"></i> Help
+                        </li>
+                        <li class="resource-link">
+                            <i class="fa-solid fa-user"></i> Your Account
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
+        <script>
+            // function toggleNav() {
+            //     document.getElementById("navMenu").classList.toggle("hidden");
+            //     document
+            //         .querySelector(".nav-hamburber-btn")
+            //         .classList.toggle("hidden");
+            // }
+
+            function toggleMenu() {
+                const menu = document.getElementById("navMenu");
+                menu.classList.toggle("open");
+                document
+                    .querySelector(".nav-hamburber-btn")
+                    .classList.toggle("hidden");
+            }
+        </script>
     </body>
 </html>
